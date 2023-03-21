@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView textoResultado;
     private EditText primerNumero;
     private static int LA_OTRA_ACTIVIDAD_ID = 13;
-
+    private String StringPrimerNumero;
 
 
 
@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
             //convierte los datos en String para pasarlos porque en la otra actividad
             // recibe con un getString
-            intencion.putExtra("Valor1", String.valueOf(primerNumero.getText()));
+            StringPrimerNumero = String.valueOf(primerNumero.getText());
+            intencion.putExtra("Valor1", "StringPrimerNumero");
         }
 
 
