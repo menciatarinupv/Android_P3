@@ -17,6 +17,7 @@ private int primerNumero;
 private EditText valor2;
 private int segundoNumero;
 private int suma;
+private String sumaMandar;
 
 
     @Override
@@ -51,7 +52,8 @@ private int suma;
 
         //al volver a pasarlo usar vlueOf para hacer una string de la suma
         Intent resultadoIntent = new Intent();
-        resultadoIntent.putExtra("suma", "String.valueOf(suma)");
+        sumaMandar = String.valueOf(suma);
+        resultadoIntent.putExtra("suma", sumaMandar);
         setResult(RESULT_OK, resultadoIntent);
         finish();
     }

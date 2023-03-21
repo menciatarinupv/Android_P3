@@ -10,16 +10,21 @@ import android.widget.TextView;
 import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView resultado;
+    private TextView textoResultado;
+    private EditText primerNumero;
     private static int LA_OTRA_ACTIVIDAD_ID = 13;
-    TextView textoResultado = (TextView) findViewById(R.id.resultado);
-    EditText primerNumero = (EditText) findViewById(R.id.primerNumero);
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d("onCreate", "estoy en onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        textoResultado = (TextView) findViewById(R.id.resultado);
+        primerNumero = (EditText) findViewById(R.id.primerNumero);
     }
 
     public void botonLlamada_pulsado (View quien){
@@ -30,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
             //convierte los datos en String para pasarlos porque en la otra actividad
             // recibe con un getString
-            intencion.putExtra("Valor1", "String.valueOf(primerNumero.getText())");
+            intencion.putExtra("Valor1", String.valueOf(primerNumero.getText()));
         }
 
 
