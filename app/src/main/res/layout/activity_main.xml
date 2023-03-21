@@ -10,12 +10,12 @@
         android:id="@+id/resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="41dp"
-        android:layout_marginBottom="146dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="45dp"
         android:text="Resultado"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <Button
@@ -35,7 +35,7 @@
         android:layout_width="269dp"
         android:layout_height="0dp"
         android:layout_marginTop="129dp"
-        android:layout_marginEnd="53dp"
+        android:layout_marginEnd="52dp"
         android:layout_marginBottom="85dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -43,5 +43,17 @@
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/botonCompartir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="54dp"
+        android:text="compartir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultado"
+        android:onClick="compartir"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

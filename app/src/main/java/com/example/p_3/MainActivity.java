@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private String StringPrimerNumero;
     private Intent mandarprimero;
     private Intent intencion;
+    private String respuesta;
 
 
 
@@ -52,9 +53,16 @@ public class MainActivity extends AppCompatActivity {
         // si acaba la "otra" actividad
         super.onActivityResult(requestCode, resultCode, intentRespuesta);
         if (requestCode == 1234) {
-            String respuesta = intentRespuesta.getExtras().getString("suma");
+            respuesta = intentRespuesta.getExtras().getString("suma");
             this.textoResultado.setText("la suma es " + respuesta);
         }
+    }
+
+    public void compartir (View quien){
+        Intent enviar = new Intent(Intent.ACTION_SEND);
+        enviar.setType("text/plain");
+        enviar.putExtra(Intent.EXTRA_TEXT, respuesta);
+        startActivity(Intent.createChooser(enviar, "Compartir resultado con:"));
     }
 
 }
