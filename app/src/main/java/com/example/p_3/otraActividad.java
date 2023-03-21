@@ -28,6 +28,9 @@ private String sumaMandar;
         //recibe el String mandado de la actividad 1
         Log.d("recibe", "recibe string valor 1");
         Intent origen = getIntent();
+        Log.d("recibe", "intent" + origen);
+        //Bundle valor11 = origen.getExtras();
+        //valor1 =  valor11.getString("Valor1");
         valor1 = origen.getExtras().getString("Valor1");
 
         //convertir el string en un valor int

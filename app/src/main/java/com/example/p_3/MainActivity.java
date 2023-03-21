@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText primerNumero;
     private static int LA_OTRA_ACTIVIDAD_ID = 13;
     private String StringPrimerNumero;
+    private Intent mandarprimero;
+    private Intent intencion;
 
 
 
@@ -28,15 +30,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void botonLlamada_pulsado (View quien){
-            Log.d("botón", "Botón pulsado");
+        Log.d("botón", "Botón pulsado");
 
-            Intent intencion = new Intent(this, otraActividad.class);
-            super.startActivity(intencion);
+        //intent `para empezar la otra actividad
+        mandarprimero = new Intent(this, otraActividad.class);
 
-            //convierte los datos en String para pasarlos porque en la otra actividad
-            // recibe con un getString
-            StringPrimerNumero = String.valueOf(primerNumero.getText());
-            intencion.putExtra("Valor1", "StringPrimerNumero");
+        //convierte los datos en String para pasarlos porque en la otra actividad
+        // recibe con un getString y lo añade a la intención
+        StringPrimerNumero = String.valueOf(primerNumero.getText());
+        Log.d("aaaa", "StringPrimerNumero");
+        mandarprimero.putExtra("Valor1", StringPrimerNumero);
+        //empieza la actividad
+        this.startActivityForResult(mandarprimero, 1234);
+
+
         }
 
 
