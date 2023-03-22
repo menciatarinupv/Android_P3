@@ -17,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
     private Intent mandarprimero;
     private Intent intencion;
     private String respuesta;
-
+    private Intent empieza_SEGUNDA;
+    private Intent i;
 
 
     @Override
@@ -44,7 +45,17 @@ public class MainActivity extends AppCompatActivity {
         //empieza la actividad
         this.startActivityForResult(mandarprimero, 1234);
 
+        }
+        public void boton_siguiente2 (View quien){
+            Log.d("botón2", "Botón2 pulsado");
+            i = new Intent("empieza.SEGUNDA");
 
+            StringPrimerNumero = String.valueOf(primerNumero.getText());
+            Log.d("aaaa", "StringPrimerNumero");
+            i.putExtra("Valor1", StringPrimerNumero);
+
+            // o también: i.setAction(“jordi.PRUEBA”);
+            this.startActivityForResult(i,1234);
         }
 
 

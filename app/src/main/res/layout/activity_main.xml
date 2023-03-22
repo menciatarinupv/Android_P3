@@ -10,22 +10,22 @@
         android:id="@+id/resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="35dp"
         android:text="Resultado"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintBottom_toTopOf="@+id/botonCompartir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/siguiente2" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="190dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="53dp"
+        android:layout_marginBottom="91dp"
         android:onClick="botonLlamada_pulsado"
         android:text="siguiente"
-        app:layout_constraintBottom_toTopOf="@+id/resultado"
+        app:layout_constraintBottom_toTopOf="@+id/siguiente2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/primerNumero" />
@@ -34,26 +34,38 @@
         android:id="@+id/primerNumero"
         android:layout_width="269dp"
         android:layout_height="0dp"
-        android:layout_marginTop="129dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="85dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="22dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="primer número"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/botonCompartir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="54dp"
+        android:layout_marginBottom="76dp"
+        android:onClick="compartir"
         android:text="compartir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultado"
-        android:onClick="compartir"/>
+        app:layout_constraintTop_toBottomOf="@+id/resultado" />
+
+    <Button
+        android:id="@+id/siguiente2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="53dp"
+        android:onClick="boton_siguiente2"
+        android:text="siguiente 2"
+        app:layout_constraintBottom_toTopOf="@+id/resultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
